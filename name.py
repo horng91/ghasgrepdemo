@@ -4,11 +4,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('name.html')
-@app.route('/howdy', methods=['POST'])
+@app.route('/hello', methods=['POST'])
 def howdy():
     name = request.form['name']
     return """
-    <h1>Howdy!!<h1>
+    <h1>Hello!!<h1>
     <h1>{}<h1>
     """.format(name)
 if __name__ == '__main__':
