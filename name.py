@@ -4,8 +4,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('name.html')
-@app.route('/howdy', methods=['POST'])
-def howdy():
+@app.route('/hello', methods=['POST'])
+def hello():
     name = request.form['name']
     return """
     <h1>Hello!!<h1>
